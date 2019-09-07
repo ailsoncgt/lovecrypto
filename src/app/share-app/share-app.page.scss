@@ -1,0 +1,81 @@
+ion-content{
+    display:flex;
+    align-content: center;
+    text-align: center;
+}
+
+ion-img.share-header{
+    width: 240px;
+    margin: auto;
+    margin-top: 32px;
+}
+
+h2{
+    margin:20px;
+    margin-top: 45px;
+
+}
+
+p.description{
+    margin: 20px;
+    font-size: 24px;
+}
+
+div.share-code{
+    border: 4px dashed rgba(0, 0, 0 ,0.6);
+    border-radius: 10px;
+    width: 300px;
+    height: 65px;
+    text-align: center;
+    vertical-align: middle;
+    margin:auto;
+    margin-top:45px;
+}
+
+p.share-code{
+    font-size: 16px;
+    color: #aaa;
+    margin: 10px;
+}
+
+span{
+    color: #AC2BFF;
+    font-size: 24px;
+}
+
+a.regulamento{
+    display: block;
+    margin-top: 32px;
+    text-decoration: underline;
+    color: rgba(0, 0, 0 ,0.6);
+}
+
+div.divisor{
+    margin-top: 45px;
+}
+
+ion-grid{
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+ion-row{
+    padding:10px;
+}
+
+ion-col{
+    text-align: center;
+}
+
+ion-img.share-icon{
+    width: 70px;
+    margin: auto;
+    margin-bottom: 16px;
+}
+
+ion-label.share-icon{
+    font-size: 16px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.6);
+}

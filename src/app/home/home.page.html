@@ -5,10 +5,13 @@
       <!-- <ion-img src="assets/logo.jpeg"></ion-img> -->
     </ion-title>
     <ion-buttons slot="end">
+      <ion-button (click)="openShare()">
+        <ion-icon name="share" slot="icon-only"></ion-icon>
+      </ion-button>
       <ion-button>
         <ion-icon name="notifications" slot="icon-only"></ion-icon>
       </ion-button>
-      <ion-button>
+      <ion-button (click)="openSettings()">
         <ion-icon name="settings" slot="icon-only"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -27,7 +30,7 @@
     <ion-button color="secondary">
       <p>SUMMARY</p>
     </ion-button>
-    <ion-button color="success">
+    <ion-button  size = "large" (click)="openWallet()" color="success">
       <p>WALLET</p>
     </ion-button>
   </div>

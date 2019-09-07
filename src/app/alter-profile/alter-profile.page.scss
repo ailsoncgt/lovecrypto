@@ -1,0 +1,34 @@
+ion-title{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 90px 1px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+ion-item.alter-profile{
+    width: 328px;
+    margin-top: 80px;
+}
+
+ion-row.alter-profile{
+    margin-top: 135px;
+    justify-content: center;
+}
+
+ion-row.footer{
+    position: absolute;
+    width: 100%;
+    bottom : 25px;
+
+    ion-button{
+        border: 2px solid;
+        border-radius: 4px;
+        width: 225px;
+     
+    }
+
+}
+
