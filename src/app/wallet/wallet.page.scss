@@ -11,28 +11,42 @@ ion-title{
     height: 100%;
     text-align: center;
 }
+ion-img{
+  max-width: 60%;
+}
+h1.big-txt{
+  font-size: 50px;
+  font-weight: 400;
+  margin-left: 20px;
+  margin-top: 0px;
+}
 
+#task-title p{
+  margin-bottom: 0;
+}
 
-.big-txt{
-    font-size: 50px;
-    font-weight: 100;
-  }
-  
-  #task-title p{
-    margin-bottom: 0;
-  }
-  
-  .min-title{
-    font-size: 14px;
-  }
-  ion-button{
-    height: 45px;
-    margin-right: 15px;
-  }
-  ion-button p{
-    font-size: 12px;
-    padding: 10px;
-  }
+.min-title{
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 20px;
+}
+ion-button{
+  height: 45px;
+  margin-right: 15px;
+}
+ion-button p{
+  font-size: 12px;
+  padding: 10px;
+}
+
+//Removi agora pq tinhamos decidido tirar o sumário no primeiro beta
+ion-button#sumaryBtn{
+  display: none;
+}
+
+ion-button#requestWithdrawBtn{
+  margin-left: 20px;
+}
   
   #tasks{
     background-color: #a82cfb;

@@ -1,8 +1,7 @@
 <ion-header no-border>
     <ion-toolbar color="primary">
       <ion-title>
-        Ionic Blank
-        <!-- <ion-img src="assets/logo.jpeg"></ion-img> -->
+       Wallet
       </ion-title>
       <ion-buttons slot="start">
         <ion-button (click)="openHome()">
@@ -23,7 +22,7 @@
       </ion-text>
   
      
-      <ion-button color="success">
+      <ion-button id = "requestWithdrawBtn"  (click)="requestWithdraw()" color="success">
         <p>REQUEST WITHDRAW</p>
       </ion-button>
     </div>
@@ -102,4 +101,4 @@
       </ion-item>
       <!-- / -->
     </div>
-  </ion-content>ion
+  </ion-content>

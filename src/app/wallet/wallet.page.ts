@@ -16,6 +16,10 @@ export class WalletPage implements OnInit {
     this.route.navigateByUrl('/home');
   };
 
+  requestWithdraw(){
+    this.route.navigateByUrl('/select-amount');
+  }
+
   ngOnInit() {
   }
 
