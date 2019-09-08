@@ -17,6 +17,10 @@ export class InsertCoinBaseAccountPage implements OnInit {
     this.route.navigateByUrl('/selectAmount');
   };
 
+  next(){
+    this.route.navigateByUrl('/confirm-transaction');
+  };
+
 
   ngOnInit() {
   }
