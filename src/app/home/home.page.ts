@@ -41,6 +41,10 @@ export class HomePage {
     this.route.navigateByUrl('/wallet');
   };
 
+  openTask() {
+    this.route.navigateByUrl('/task-new-task');
+  };
+
   ngOnInit() {
     this.taskProvider.list().subscribe((tasks: any) => {
       this.tasks = tasks

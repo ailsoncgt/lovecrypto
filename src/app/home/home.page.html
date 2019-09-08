@@ -7,9 +7,11 @@
       <ion-button (click)="openShare()">
         <ion-icon name="share" slot="icon-only"></ion-icon>
       </ion-button>
+      <!--Removido no beta
       <ion-button>
         <ion-icon name="notifications" slot="icon-only"></ion-icon>
       </ion-button>
+      -->
       <ion-button (click)="openSettings()">
         <ion-icon name="settings" slot="icon-only"></ion-icon>
       </ion-button>
@@ -23,32 +25,32 @@
       <p class="min-title">YOUR BALANCE</p>
     </ion-text>
     <ion-text>
-      <h1 class="big-txt">${{user.balance}}</h1>
+      <h1 class="big-txt">$50.90{{user.balance}}</h1>
     </ion-text>
 
-    <ion-button color="secondary">
+    <ion-button id  = "sumaryBtn" color="secondary">
       <p>SUMMARY</p>
     </ion-button>
-    <ion-button size="large" (click)="openWallet()" color="success">
+    <ion-button id = "walletBtn" size="large" (click)="openWallet()" color="success">
       <p>WALLET</p>
     </ion-button>
   </div>
   <!-- / -->
   <div class="gradient-secondary-to-primary" id="task-title">
     <ion-text>
-      <p class="ion-padding">TASKS</p>
+      <p class="ion-padding tasks-title ">TASKS</p>
     </ion-text>
   </div>
   <!-- / -->
-  <div id="tasks" color="primary">
+  <div id="tasks" color="primary" (click)="openTask()">
     <ion-item *ngFor="let task of tasks">
       <div slot="start" class="cmp">
         <p>{{task.name}}</p>
         <ion-label>detila detail short description lorem</ion-label>
       </div>
       <div slot="end" class="service">
-        <p color="success">{{task.type}}</p>
-        <h3 color="success">$ {{task.reward}}</h3>
+        <p>{{task.type}}</p>
+        <h3>$ {{task.reward}}</h3>
       </div>
     </ion-item>
     <!-- / -->

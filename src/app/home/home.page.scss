@@ -4,9 +4,11 @@
 ion-img{
   max-width: 60%;
 }
-.big-txt{
+h1.big-txt{
   font-size: 50px;
-  font-weight: 100;
+  font-weight: 400;
+  margin-left: 20px;
+  margin-top: 0px;
 }
 
 #task-title p{
@@ -15,6 +17,8 @@ ion-img{
 
 .min-title{
   font-size: 14px;
+  font-weight: 400;
+  margin-left: 20px;
 }
 ion-button{
   height: 45px;
@@ -25,9 +29,25 @@ ion-button p{
   padding: 10px;
 }
 
+//Removi agora pq tinhamos decidido tirar o sumário no primeiro beta
+ion-button#sumaryBtn{
+  display: none;
+}
+
+ion-button#walletBtn{
+  margin-left: 20px;
+}
+
+p.tasks-title{
+  margin-left: 32px;
+  font-weight: 400px;
+  font-size: 14px;
+}
+
 #tasks{
   background-color: #a82cfb;
   padding: 10px;
+  min-height: 350px;
 
   ion-item{
     margin-bottom: 10px;
@@ -46,14 +66,15 @@ ion-button p{
       }
     }
     .service{
-      text-align: center;
+      text-align: end;
       margin-left: 0;
       h3{
         font-weight: 100;
-        color: #32d056;
+        font-size: 25px;
+        color:var(--secondary-green-desaturated);
       }
       p{
-        color: #32d056;
+        color: var(--secondary-green-desaturated);
         font-size: 11px;
       }
     }
