@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthProvider } from '../../providers/auth/auth.provider';
 
 //Rotas
 import { Router } from '@angular/router';
@@ -10,52 +11,55 @@ import { Router } from '@angular/router';
 })
 export class SettingsPage implements OnInit {
 
-  constructor(private route: Router) { 
-   
+  constructor(private route: Router,
+    private authProvider: AuthProvider) {
+
   }
 
-  openHelp(){
+  openHelp() {
     this.route.navigateByUrl('/help');
   };
 
-  openProfile(){
+  openProfile() {
     this.route.navigateByUrl('/profile');
   };
 
-  openNotifications(){
+  openNotifications() {
     this.route.navigateByUrl('/notifications');
   };
 
-  openPaymentAcounts(){
+  openPaymentAcounts() {
     this.route.navigateByUrl('/payment-acounts');
   };
 
-  openLegal(){
+  openLegal() {
     this.route.navigateByUrl('/legal');
   };
 
-  openAbout(){
+  openAbout() {
     this.route.navigateByUrl('/about');
   };
 
   //back
-  openHome(){
+  openHome() {
     this.route.navigateByUrl('/home');
   };
 
-  logout(){
-    //localStorage.clear(); //Se tiver alguma informação local
-    //this.backToWelcome(); //Criar uma função para ir para a tela deslogada
+  logout() {
+    this.authProvider.logout().then(_ => {
+      localStorage.clear();
+      this.route.navigateByUrl('/welcome');
+    })
   }
 
- 
-  
-  
-
- 
 
 
-  
+
+
+
+
+
+
 
   ngOnInit() {
   }

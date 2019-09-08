@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 
 //Rotas
 import { Router } from '@angular/router';
+import { TaskPrivider } from '../../providers/task/task'
+import { UserPrivider } from '../../providers/user/user'
+import { AuthProvider } from 'src/providers/auth/auth.provider';
 
 
 @Component({
@@ -11,19 +14,38 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
 
-  constructor(private route: Router) {}
+  tasks: [];
+  user: any = {};
 
-  openSettings(){
+  constructor(private route: Router,
+    private taskProvider: TaskPrivider,
+    private authProvider: AuthProvider,
+    private userProvider: UserPrivider) {
+
+    this.authProvider.getUserUid().then(uid => {
+      this.userProvider.byId(uid).subscribe((user: any) => {
+        this.user = user;
+      })
+    })
+  }
+
+  openSettings() {
     this.route.navigateByUrl('/settings');
   };
 
-  openShare(){
+  openShare() {
     this.route.navigateByUrl('/share-app');
   };
 
-  openWallet(){
+  openWallet() {
     this.route.navigateByUrl('/wallet');
   };
+
+  ngOnInit() {
+    this.taskProvider.list().subscribe((tasks: any) => {
+      this.tasks = tasks
+    })
+  }
 
 
 

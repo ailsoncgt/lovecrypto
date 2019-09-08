@@ -3,7 +3,23 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfigDev: {
+    apiKey: 'AIzaSyAoeegEW99VL3ZlsIDPMUdJvV1-GEJBgvc',
+    authDomain: 'lovecrypto-dev.firebaseapp.com',
+    databaseURL: 'https://lovecrypto-dev.firebaseio.com',
+    projectId: 'lovecrypto-dev',
+    storageBucket: 'lovecrypto-dev.appspot.com',
+    messagingSenderId: '915845624322'
+  },
+  firebaseConfigProd: {
+    apiKey: 'AIzaSyAoeegEW99VL3ZlsIDPMUdJvV1-GEJBgvc',
+    authDomain: 'lovecrypto-dev.firebaseapp.com',
+    databaseURL: 'https://lovecrypto-dev.firebaseio.com',
+    projectId: 'lovecrypto-dev',
+    storageBucket: 'lovecrypto-dev.appspot.com',
+    messagingSenderId: '915845624322'
+  }
 };
 
 /*

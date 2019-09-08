@@ -1,8 +1,7 @@
 <ion-header no-border>
   <ion-toolbar color="primary">
     <ion-title>
-      Ionic Blank
-      <!-- <ion-img src="assets/logo.jpeg"></ion-img> -->
+      <ion-img src="assets/lc.png"></ion-img>
     </ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="openShare()">
@@ -24,13 +23,13 @@
       <p class="min-title">YOUR BALANCE</p>
     </ion-text>
     <ion-text>
-      <h1 class="big-txt">$59.50</h1>
+      <h1 class="big-txt">${{user.balance}}</h1>
     </ion-text>
 
     <ion-button color="secondary">
       <p>SUMMARY</p>
     </ion-button>
-    <ion-button  size = "large" (click)="openWallet()" color="success">
+    <ion-button size="large" (click)="openWallet()" color="success">
       <p>WALLET</p>
     </ion-button>
   </div>
@@ -42,69 +41,14 @@
   </div>
   <!-- / -->
   <div id="tasks" color="primary">
-    <ion-item>
+    <ion-item *ngFor="let task of tasks">
       <div slot="start" class="cmp">
-        <p>COMPANY NAME VERY LONG TO TEST</p>
+        <p>{{task.name}}</p>
         <ion-label>detila detail short description lorem</ion-label>
       </div>
       <div slot="end" class="service">
-        <p color="success">survey type</p>
-        <h3 color="success">$ 1.50</h3>
-      </div>
-    </ion-item>
-    <!-- / -->
-    <ion-item>
-      <div slot="start" class="cmp">
-        <p>COMPANY NAME</p>
-        <ion-label>detila detail short description lorem</ion-label>
-      </div>
-      <div slot="end" class="service">
-        <p color="success">survey type</p>
-        <h3 color="success">$ 1.50</h3>
-      </div>
-    </ion-item>
-    <!-- / -->
-    <ion-item>
-      <div slot="start" class="cmp">
-        <p>COMPANY NAME</p>
-        <ion-label>detila detail short description lorem</ion-label>
-      </div>
-      <div slot="end" class="service">
-        <p color="success">survey type</p>
-        <h3 color="success">$ 1.50</h3>
-      </div>
-    </ion-item>
-    <!-- / -->
-    <ion-item>
-      <div slot="start" class="cmp">
-        <p>COMPANY NAME</p>
-        <ion-label>detila detail short description lorem</ion-label>
-      </div>
-      <div slot="end" class="service">
-        <p color="success">survey type</p>
-        <h3 color="success">$ 1.50</h3>
-      </div>
-    </ion-item>
-    <!-- / -->
-    <ion-item>
-      <div slot="start" class="cmp">
-        <p>COMPANY NAME</p>
-        <ion-label>detila detail short description lorem</ion-label>
-      </div>
-      <div slot="end" class="service">
-        <p color="success">survey type</p>
-        <h3 color="success">$ 1.50</h3>
-      </div>
-    </ion-item>
-    <!-- / -->
-    <ion-item>
-      <div slot="start" class="cmp">
-        <p>COMPANY NAME</p>
-        <ion-label>detila detail short description lorem</ion-label>
-      </div>
-      <div slot="end" class="service">
-        <p color="success">survey type</p>
-        <h3 color="success">$ 1.50</h3>
+        <p color="success">{{task.type}}</p>
+        <h3 color="success">$ {{task.reward}}</h3>
       </div>
     </ion-item>
     <!-- / -->

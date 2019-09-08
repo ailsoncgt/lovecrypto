@@ -1,0 +1,21 @@
+<ion-content>
+	<div id="login-wrapper">
+		<form action="" class="ion-padding" [formGroup]="loginForm" novalidate>
+			<ion-text>
+				<h3>Login</h3>
+				<p center class="error-msg-form" *ngIf="showError">{{errorTxt}}</p>
+			</ion-text>
+			<div id="input">
+				<ion-input class="lovc-input" placeholder="email" formControlName="email"></ion-input>
+				<ion-input class="lovc-input" placeholder="senha" type="password" formControlName="password"></ion-input>
+			</div>
+			<div slot="end">
+				<p class="forgot" [routerLink]="['/sign-up']">Sign Up</p>
+			</div>
+			<ion-button color="success" (click)="login()" [disabled]="!loginForm.valid || loading">
+				<p *ngIf="!loading">LOGIN</p>
+				<p *ngIf="loading">LOADING...</p>
+			</ion-button>
+		</form>
+	</div>
+</ion-content>
