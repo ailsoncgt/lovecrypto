@@ -74,8 +74,42 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  /**Adicionado no fix**/
+  --primary-purple: #7A05C8;
+  --primary-purple-saturated: #9807F9;
+  --primary-purple-desaturated: #6204A0;
+  --secondary-green: #24D157;
+  --secondary-green-saturated: #51E17C;
+  --secondary-green-desaturated: #1DA746;
 }
+
+
 
 .gradient-secondary-to-primary{
   background: linear-gradient(to right, #a82cfb, #a82cfb, #7f0bd0, #7b05c9);
+}
+.lovc-input{
+  border-radius: 3px;
+  border: 1px solid #7b05c9;
+  color: #7b05c9;
+  font-weight: 500;
+  font-size: 13px;
+  height: 45px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+.lovc-input:last-child{
+  margin-bottom: 15px;
+}
+.error-msg{
+  font-size: 12px;
+  color: red;
+  float: left;
+  margin-top: -28px;
+}
+.error-msg-form{
+  font-size: 12px;
+  color: red;
+  text-align: center
 }
