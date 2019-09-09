@@ -14,7 +14,7 @@ export class InsertCoinBaseAccountPage implements OnInit {
   constructor(private route: Router) { }
 
   goBack(){
-    this.route.navigateByUrl('/selectAmount');
+    this.route.navigateByUrl('/select-amount');
   };
 
   next(){
