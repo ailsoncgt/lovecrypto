@@ -23,4 +23,7 @@ const routes: Routes = [
   ],
   declarations: [WelcomePage]
 })
-export class WelcomePageModule {}
+export class WelcomePageModule {
+
+  
+}

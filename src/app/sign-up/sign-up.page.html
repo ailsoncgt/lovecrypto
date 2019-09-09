@@ -1,11 +1,22 @@
+<ion-header no-border color = "primary" >
+    <ion-toolbar color = "primary" >
+      <ion-img (click) = "goBack()" class="logo" src="../assets/logo.png"></ion-img>
+    </ion-toolbar>
+  </ion-header>
+  
+
 <ion-content>
   <div id="signup-wrapper">
     <form action="" class="ion-padding" [formGroup]="signUpForm" novalidate>
-      <ion-text>
-        <h3>Sign Up</h3>
-      </ion-text>
+      <!-- 
+        <ion-text>
+          <h3>Sign Up</h3>
+        </ion-text>
+      
+      -->
+      
       <div id="input">
-        <ion-input class="lovc-input" placeholder="nome completo" formControlName="name"></ion-input>
+        <ion-input autofocus = "true" class="lovc-input" placeholder="nome completo" formControlName="name"></ion-input>
         <ion-input class="lovc-input" placeholder="email" type="email" formControlName="email"></ion-input>
         <ion-label class="error-msg" *ngIf="emailInUseError">E-mail já
           cadastrado
@@ -15,9 +26,11 @@
         </ion-input>
       </div>
       <div slot="end">
-        <p class="forgot" [routerLink]="['/login']">Login</p>
+        <!-- 
+					 <p class="forgot" [routerLink]="['/login']">Login</p>
+				-->
       </div>
-      <ion-button color="success" [disabled]="!signUpForm.valid || loading" (click)="signUp()">
+      <ion-button size = "large" color="success" [disabled]="!signUpForm.valid || loading" (click)="signUp()">
         <p *ngIf="!loading">SIGN UP</p>
         <p *ngIf="loading">LOADING...</p>
       </ion-button>
