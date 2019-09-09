@@ -17,4 +17,8 @@ export class UserPrivider {
   byId(id) {
     return this.afDb.object(`${Constants.PATH_DOCUMENTS_USER}${id}`).valueChanges();
   }
+
+  setItem(id, data): Promise<any> {
+    return this.afDb.object(`${Constants.PATH_DOCUMENTS_USER}${id}`).update(data)
+  }
 }

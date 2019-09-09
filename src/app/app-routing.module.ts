@@ -23,9 +23,9 @@ const routes: Routes = [
   { path: 'regulament', loadChildren: './regulamento/regulamento.module#RegulamentoPageModule', canActivate: [AuthProvider] },
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'sign-up', loadChildren: './sign-up/sign-up.module#SignUpPageModule' },
-  { path: 'task-insert-data', loadChildren: './task-insert-data/task-insert-data.module#TaskInsertDataPageModule' },
-  { path: 'task-new-task', loadChildren: './task-new-task/task-new-task.module#TaskNewTaskPageModule' },
-  { path: 'task-acomplished', loadChildren: './task-acomplished/task-acomplished.module#TaskAcomplishedPageModule' },
+  // { path: 'task-insert-data', loadChildren: './task-insert-data/task-insert-data.module#TaskInsertDataPageModule' },
+  // { path: 'task-new-task', loadChildren: './task-new-task/task-new-task.module#TaskNewTaskPageModule' },
+  // { path: 'task-acomplished', loadChildren: './task-acomplished/task-acomplished.module#TaskAcomplishedPageModule' },
 
 ];
 

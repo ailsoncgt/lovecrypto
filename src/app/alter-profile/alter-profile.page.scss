@@ -23,11 +23,15 @@ ion-row.footer{
     width: 100%;
     bottom : 25px;
 
-    ion-button{
+    ion-button.logout{
         border: 2px solid;
         border-radius: 4px;
         width: 225px;
-     
+    }
+    ion-button.save{
+        border: 1px solid;
+        border-radius: 4px;
+        width: 225px;
     }
 
 }

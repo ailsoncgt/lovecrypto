@@ -25,7 +25,6 @@ export class AuthProvider implements CanActivate {
     return new Promise((resolve, reject) => {
       this.afAuth.authState.subscribe((user: firebase.User) => {
         if (user) {
-          console.log(user)
           resolve(true)
         }
         else {

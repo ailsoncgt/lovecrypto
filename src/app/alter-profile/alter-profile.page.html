@@ -1,39 +1,101 @@
 <ion-header no-border>
-    <ion-toolbar color="primary">
-      <ion-buttons slot="start">
-        <ion-button (click) = "openProfile()">
-          <ion-icon name="close" slot="icon-only"></ion-icon>
-        </ion-button>
-      </ion-buttons>
-      <ion-title class>
-        Alter Profile
-        <!-- <ion-img src="assets/logo.jpeg"></ion-img> -->
-      </ion-title>
-    </ion-toolbar>
-  </ion-header>
-  
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="openProfile()">
+        <ion-icon name="close" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      Alter Profile
+      <!-- <ion-img src="assets/logo.jpeg"></ion-img> -->
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
 <ion-content>
 
-  
-<!-- Input with placeholder -->
-  <ion-row class = "alter-profile">
 
-    <ion-item class = "alter-profile">
-      <ion-label position="floating">Info To Change</ion-label>
-      <ion-input></ion-input>
-    </ion-item>
+  <!-- Input with placeholder -->
+  <ion-row class="alter-profile">
+    <form action="" [formGroup]="profileForm" novalidate>
+      <ion-item class="alter-profile" *ngIf="field == 'country'">
+        <ion-label position="floating">Country</ion-label>
+        <ion-input formControlName="country"></ion-input>
+      </ion-item>
+      <!-- / -->
+      <ion-item class="alter-profile" *ngIf="field == 'city'">
+        <ion-label position="floating">City</ion-label>
+        <ion-input formControlName="city"></ion-input>
+      </ion-item>
+      <!-- / -->
+      <ion-item class="alter-profile" *ngIf="field == 'phone'">
+        <ion-label position="floating">Phone</ion-label>
+        <ion-input formControlName="phone"></ion-input>
+      </ion-item>
+      <!-- / -->
+      <ion-item class="alter-profile" *ngIf="field == 'gender'">
+        <ion-label position="floating">Gender</ion-label>
+        <ion-select formControlName="gender">
+          <ion-select-option value="mas">Male</ion-select-option>
+          <ion-select-option value="fem">Female</ion-select-option>
+          <ion-select-option value="non-binary">Non binary</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <!-- / -->
+      <ion-item class="alter-profile" *ngIf="field == 'country'">
+        <ion-label position="floating">Country</ion-label>
+        <ion-select formControlName="country">
+          <ion-select-option value="br">Brazil</ion-select-option>
+          <ion-select-option value="us">USA</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <!-- / -->
+      <ion-item class="alter-profile" *ngIf="field == 'interest'">
+        <ion-label position="floating">Interest</ion-label>
+        <ion-select formControlName="interest" multiple>
+          <ion-select-option value="tecnology">Tecnology</ion-select-option>
+          <ion-select-option value="cryptocurrencies">Cryptocurrencies</ion-select-option>
+          <ion-select-option value="food-and-drinks">Food and drinks</ion-select-option>
+          <ion-select-option value="humor">Humor</ion-select-option>
+          <ion-select-option value="politics">Politics</ion-select-option>
+          <ion-select-option value="astronomy">Astronomy</ion-select-option>
+          <ion-select-option value="equality">Equality</ion-select-option>
+          <ion-select-option value="nature">Nature</ion-select-option>
+          <ion-select-option value="education">Education</ion-select-option>
+          <ion-select-option value="relationships">Relationships</ion-select-option>
+          <ion-select-option value="design">Design</ion-select-option>
+          <ion-select-option value="justice">Justice</ion-select-option>
+          <ion-select-option value="sports">Sports</ion-select-option>
+          <ion-select-option value="art">Art</ion-select-option>
+          <ion-select-option value="science">Science</ion-select-option>
+          <ion-select-option value="math">Math</ion-select-option>
+          <ion-select-option value="style">Style</ion-select-option>
+          <ion-select-option value="money">Money</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <!-- / -->
+      <ion-item class="alter-profile" *ngIf="field == 'birthday'">
+        <ion-label position="floating">Birthday</ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY" formControlName="birthday"></ion-datetime>
+      </ion-item>
+      <!-- / -->
 
-    <ion-item class = "alter-profile">
-      <ion-label position="floating">Your Password</ion-label>
-      <ion-input></ion-input>
-    </ion-item>
- 
+      <!-- <ion-item class="alter-profile">
+        <ion-label position="floating">Your Password</ion-label>
+        <ion-input></ion-input>
+      </ion-item> -->
+    </form>
+
   </ion-row>
-    
-  <ion-row class="footer" center>  
-    <ion-col text-center>   
-        <ion-button size = "large" fill="outline" (click) = "logout()"><span>Logout</span></ion-button>
-    </ion-col> 
+
+  <ion-row class="footer" center>
+    <ion-col text-center *ngIf="!task">
+      <ion-button class="logout" size="large" fill="outline" (click)="logout()"><span>Logout</span></ion-button>
+    </ion-col>
+    <ion-col text-center *ngIf="task">
+      <ion-button class="save" size="large" fill="outline" (click)="save()" color="success"><span>SAVE</span>
+      </ion-button>
+    </ion-col>
   </ion-row>
 
 </ion-content>

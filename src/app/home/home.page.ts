@@ -14,7 +14,7 @@ import { AuthProvider } from 'src/providers/auth/auth.provider';
 })
 export class HomePage {
 
-  tasks: [];
+  tasks: any = [];
   user: any = {};
 
   constructor(private route: Router,
@@ -41,9 +41,11 @@ export class HomePage {
     this.route.navigateByUrl('/wallet');
   };
 
-  openTask() {
-    this.route.navigateByUrl('/task-new-task');
+  openTask(task) {
+    this.route.navigateByUrl(`/${task.url}&taskId=${task.id}`);
   };
+
+
 
   ngOnInit() {
     this.taskProvider.list().subscribe((tasks: any) => {

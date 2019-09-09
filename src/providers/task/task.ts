@@ -15,6 +15,10 @@ export class TaskPrivider {
     return this.afDb.list(Constants.PATH_DOCUMENTS_TASKS).valueChanges();
   }
 
+  byId(id) {
+    return this.afDb.object(`${Constants.PATH_DOCUMENTS_TASKS}${id}`).valueChanges();
+  }
+
   addUser(taskId): Promise<any> {
     return new Promise((resolve, reject) => {
       this.authProvider.getUserUid().then(uid => {

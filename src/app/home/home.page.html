@@ -25,13 +25,13 @@
       <p class="min-title">YOUR BALANCE</p>
     </ion-text>
     <ion-text>
-      <h1 class="big-txt">$50.90{{user.balance}}</h1>
+      <h1 class="big-txt">${{user.balance}}</h1>
     </ion-text>
 
-    <ion-button id  = "sumaryBtn" color="secondary">
+    <ion-button id="sumaryBtn" color="secondary">
       <p>SUMMARY</p>
     </ion-button>
-    <ion-button id = "walletBtn" size="large" (click)="openWallet()" color="success">
+    <ion-button id="walletBtn" size="large" (click)="openWallet()" color="success">
       <p>WALLET</p>
     </ion-button>
   </div>
@@ -42,8 +42,8 @@
     </ion-text>
   </div>
   <!-- / -->
-  <div id="tasks" color="primary" (click)="openTask()">
-    <ion-item *ngFor="let task of tasks">
+  <div id="tasks" color="primary">
+    <ion-item *ngFor="let task of tasks" (click)="openTask(task)">
       <div slot="start" class="cmp">
         <p>{{task.name}}</p>
         <ion-label>detila detail short description lorem</ion-label>
@@ -53,6 +53,10 @@
         <h3>$ {{task.reward}}</h3>
       </div>
     </ion-item>
+    <ion-text *ngIf="!tasks.length" center class="task-completed">
+      <h4>Congratulations!</h4>
+      <h5>You have completed all tasks</h5>
+    </ion-text>
     <!-- / -->
   </div>
 </ion-content>

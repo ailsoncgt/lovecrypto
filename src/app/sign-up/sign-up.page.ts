@@ -3,6 +3,7 @@ import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { AuthProvider } from '../../providers/auth/auth.provider';
 
 import { Router } from '@angular/router';
+import { User } from '../../models/users'
 
 @Component({
   selector: 'app-sign-up',
@@ -40,7 +41,8 @@ export class SignUpPage implements OnInit {
     const password = this.signUpForm.value.password
     this.loading = true;
     this.authProvider.signUp(email, password).then(token => {
-      this.authProvider.createUserOnDatabase(token, this.signUpForm.value).then(result => {
+      const user = new User(this.signUpForm.value)
+      this.authProvider.createUserOnDatabase(token, user).then(result => {
         this.route.navigateByUrl('/home');
       })
     }).catch(err => {
