@@ -1,0 +1,43 @@
+<ion-header no-border>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-button (click) = "goBack()">
+          <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title class>
+        Select amount
+        <!-- <ion-img src="assets/logo.jpeg"></ion-img> -->
+      </ion-title>
+      
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-text>
+      <h2 class = "info">
+          Insert the amout you want to transfer for your Coinbase acount
+      </h2>
+    </ion-text>
+  
+    <ion-row class = "alter-profile">
+      <ion-item class = "alter-profile">
+        <ion-label position="floating">insert value</ion-label>
+        <ion-input type="number" value="0"></ion-input>
+      </ion-item>  
+    </ion-row>
+
+    <ion-text>
+        <p class = "info">
+            Transfer time can be up to 2 business days
+        </p>
+    </ion-text>
+    
+    <ion-row class="footer" center>  
+      <ion-col>   
+          <ion-button size = "large" fill="clear" (click) = "next()"><span>Next</span></ion-button>
+      </ion-col> 
+    </ion-row>
+  
+  </ion-content>
+  

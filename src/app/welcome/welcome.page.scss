@@ -1,35 +1,35 @@
-ion-page.welcome.page{
-    //background-image: url('../assets/logo.png');
-    background-image: linear-gradient(rgba(122, 5, 200, 0.2), rgba(122, 5, 200, 1));
-}
-
-ion-page.welcome-page > ion-content{
-    //background-color: transparent;
-}
-
-.gradi{
-    background-image: linear-gradient(rgba(122, 5, 200, 0.2), rgba(122, 5, 200, 1));
-}
-
 ion-header{
-
     background-color: purple;
 
     ion-img{
         margin: auto;
         margin-top: 90px;
     }
+    
+    ion-img.logo{
+        width: 300px;
+    }
 }
-ion-content{
-   //background-color: purple;    
 
+ion-content{
+
+   background-color: purple;    
+   
     p.info{
         font-size: 25px;
         font-weight: bold;
         margin: 25px;
-        margin-top: 300px;
-        position: absolute;
-        bottom: 180px;
+        //margin-top: 300px;
+        //position: absolute;
+        //bottom: 180px;
+        //fon
+        background-color: var(--primary-purple);
+        height: 200px;
+        width: 100%;
+    }
+
+    ion-slides{
+        margin-top: 250px;
     }
 
     div.bullets{
@@ -37,7 +37,7 @@ ion-content{
         width: 100%;
         height: 40px;
        
-        background-color: cadetblue;
+       // background-color: cadetblue;
         bottom: 100px;
     }
 
@@ -53,26 +53,15 @@ ion-content{
             width: 160px;
             height: 48px;
             font-size: 14px;
+            z-index: 1;
             
         }
-
-        ion-button.no-fill{
-            //border: 2px solid white;
-            //border-radius: 4px;
-        }
-
-        ion-button.fill{
-            //border-radius: 4px;
-            //color: white;
-        }
     
-    
+
 
     }
         
 }
 
-ion-img.logo{
-    width: 300px;
-}
+
 

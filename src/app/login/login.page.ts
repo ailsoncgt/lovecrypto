@@ -31,6 +31,11 @@ export class LoginPage implements OnInit {
   }
 
   ngOnInit() {
+    this.authProvider.getUserUid().then(uid => {
+      this.router.navigateByUrl('/home')
+    }).catch(err => {
+      console.log(err)
+    })
   }
 
   login() {
@@ -38,6 +43,7 @@ export class LoginPage implements OnInit {
     const password = this.loginForm.value.password;
     this.loading = true;
     this.authProvider.login(email, password).then(data => {
+      this.loading = false;
       this.router.navigateByUrl('/home')
     }).catch(err => {
       if (err.code) {

@@ -16,6 +16,7 @@ export class HomePage {
 
   tasks: any = [];
   user: any = {};
+  userId: string;
 
   constructor(private route: Router,
     private taskProvider: TaskPrivider,
@@ -23,6 +24,7 @@ export class HomePage {
     private userProvider: UserPrivider) {
 
     this.authProvider.getUserUid().then(uid => {
+      this.userId = uid;
       this.userProvider.byId(uid).subscribe((user: any) => {
         this.user = user;
       })
@@ -49,7 +51,21 @@ export class HomePage {
 
   ngOnInit() {
     this.taskProvider.list().subscribe((tasks: any) => {
-      this.tasks = tasks
+      this.tasks = [];
+      tasks.map(task => {
+        let find = false;
+        if (task.participants) {
+          Object.keys(task.participants).forEach(key => {
+            console.log(key, this.userId)
+            if (key == this.userId) {
+              find = true;
+            }
+          })
+        }
+        if (!find) {
+          this.tasks.push(task)
+        }
+      })
     })
   }
 

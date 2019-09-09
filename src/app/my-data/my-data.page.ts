@@ -13,11 +13,13 @@ export class MyDataPage implements OnInit {
 
   constructor(private route: Router) { }
 
-  openLegal(){
+  openLegal() {
     this.route.navigateByUrl('/legal');
   };
 
   ngOnInit() {
   }
+
+  logout() { }
 
 }

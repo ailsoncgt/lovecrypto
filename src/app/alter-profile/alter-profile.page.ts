@@ -47,7 +47,7 @@ export class AlterProfilePage implements OnInit {
       this.userProvider.byId(uid).subscribe(user => {
         this.user = user;
         this.userBalance = this.user.balance;
-        console.log(this.userBalance)
+        // console.log(this.userBalance)
       })
     })
 
@@ -70,11 +70,13 @@ export class AlterProfilePage implements OnInit {
   addUserInTask() {
     this.taskProvider.addUser(this.taskId).then(_ => {
       this.taskProvider.byId(this.taskId).subscribe((task: any) => {
-        this.userBalance += task.award
-        console.log(this.userBalance)
+        // console.log(task)
+        this.userBalance += parseFloat(task.reward)
+        this.userProvider.setItem(this.userId, { balance: this.userBalance }).then(_ => {
+          this.route.navigateByUrl('/home')
+        })
       })
     })
-    this.route.navigateByUrl('/home')
   }
   save() {
     if (this.field == 'city') {
@@ -108,5 +110,8 @@ export class AlterProfilePage implements OnInit {
       })
     }
   }
+
+  logout() { }
+  openHelp() { }
 
 }

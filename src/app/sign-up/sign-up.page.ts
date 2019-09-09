@@ -33,6 +33,11 @@ export class SignUpPage implements OnInit {
   }
 
 
+  goBack(){
+    this.route.navigateByUrl('/welcome');
+  };
+
+
   ngOnInit() {
   }
 

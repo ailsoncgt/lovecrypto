@@ -1,0 +1,39 @@
+<ion-header no-border>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-button (click) = "goBack()">
+          <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title class>
+        Insert Coinbase Account
+        <!-- <ion-img src="assets/logo.jpeg"></ion-img> -->
+      </ion-title>
+      
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-text>
+      <p>
+        Please,
+        insert your coinbase account.
+        The ammount selected gonna be transfered to the account 
+      </p>
+    </ion-text>
+  
+    <ion-row class = "alter-profile">
+      <ion-item class = "alter-profile">
+        <ion-label position="floating">email</ion-label>
+        <ion-input></ion-input>
+      </ion-item>  
+    </ion-row>
+    
+    <ion-row class="footer" center>  
+      <ion-col>   
+          <ion-button size = "large" fill="clear" (click) = "next()"><span>Next</span></ion-button>
+      </ion-col> 
+    </ion-row>
+  
+  </ion-content>
+  

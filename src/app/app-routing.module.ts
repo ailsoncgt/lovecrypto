@@ -16,16 +16,19 @@ const routes: Routes = [
   { path: 'privacy-policy', loadChildren: './privacy-policy/privacy-policy.module#PrivacyPolicyPageModule', canActivate: [AuthProvider] },
   { path: 'therms-of-service', loadChildren: './therms-of-service/therms-of-service.module#ThermsOfServicePageModule', canActivate: [AuthProvider] },
   { path: 'share-app', loadChildren: './share-app/share-app.module#ShareAppPageModule', canActivate: [AuthProvider] },
-  { path: 'welcome', loadChildren: './welcome/welcome.module#WelcomePageModule', canActivate: [AuthProvider] },
+  { path: 'welcome', loadChildren: './welcome/welcome.module#WelcomePageModule' },
   { path: 'splash-screen', loadChildren: './splash-screen/splash-screen.module#SplashScreenPageModule' },
   { path: 'alter-profile', loadChildren: './alter-profile/alter-profile.module#AlterProfilePageModule', canActivate: [AuthProvider] },
   { path: 'wallet', loadChildren: './wallet/wallet.module#WalletPageModule', canActivate: [AuthProvider] },
   { path: 'regulament', loadChildren: './regulamento/regulamento.module#RegulamentoPageModule', canActivate: [AuthProvider] },
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'sign-up', loadChildren: './sign-up/sign-up.module#SignUpPageModule' },
-  // { path: 'task-insert-data', loadChildren: './task-insert-data/task-insert-data.module#TaskInsertDataPageModule' },
-  // { path: 'task-new-task', loadChildren: './task-new-task/task-new-task.module#TaskNewTaskPageModule' },
-  // { path: 'task-acomplished', loadChildren: './task-acomplished/task-acomplished.module#TaskAcomplishedPageModule' },
+  { path: 'task-insert-data', loadChildren: './task-insert-data/task-insert-data.module#TaskInsertDataPageModule' },
+  { path: 'task-new-task', loadChildren: './task-new-task/task-new-task.module#TaskNewTaskPageModule' },
+  { path: 'task-acomplished', loadChildren: './task-acomplished/task-acomplished.module#TaskAcomplishedPageModule' },
+  { path: 'insert-coin-base-account', loadChildren: './insert-coin-base-account/insert-coin-base-account.module#InsertCoinBaseAccountPageModule' },
+  { path: 'select-amount', loadChildren: './select-amount/select-amount.module#SelectAmountPageModule' },
+  { path: 'confirm-transaction', loadChildren: './confirm-transaction/confirm-transaction.module#ConfirmTransactionPageModule' },
 
 ];
 

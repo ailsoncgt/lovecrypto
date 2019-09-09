@@ -14,5 +14,12 @@ ion-text{
         font-size:16px;
     }
 
-    
+    p.bold{
+        font-weight: 700;
+    }
+
+    p.info{
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0.6);
+    }
 }
