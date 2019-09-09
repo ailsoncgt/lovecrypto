@@ -45,8 +45,8 @@
   <div id="tasks" color="primary">
     <ion-item *ngFor="let task of tasks" (click)="openTask(task)">
       <div slot="start" class="cmp">
-        <p>{{task.name}}</p>
-        <ion-label>{{task.shortDescription}}</ion-label>
+        <p class = "taskName">{{task.name}}</p>
+        <ion-label class = "taskDetail">This task gonna reward you</ion-label>
       </div>
       <div slot="end" class="service">
         <p>{{task.type}}</p>

@@ -1,10 +1,28 @@
+ion-header{
+  background-color: purple;
+
+  ion-img{
+      margin: auto;
+      margin-top: 90px;
+      margin-bottom: 90px;
+  }
+  
+  ion-img.logo{
+      width: 300px;
+  }
+}
+
+
 ion-content{
+
+
+
   #login-wrapper{
     margin-top: 30%;
     form{
       max-width: 400px;
       margin-top: 20%;
-      margin: 0 auto;
+      margin: 25px;
       text-align: center;
     }
     h3{
@@ -19,12 +37,17 @@ ion-content{
       bottom: 30px;
       left: 25%;
     }
-    .forgot{
-      float: right;
-      font-size: 13px;
+    
+    a.forgot{
+      font-size: 14px;
       color: #7b05c9;
       cursor: pointer;
       margin: 0;  
+    }
+    p.forgot{
+      float: right;
+      font-size: 14px;
+      color: rgba(0, 0 ,0 , 0.8);
     }
   }
   

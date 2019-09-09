@@ -1,19 +1,31 @@
-<ion-content>
+<ion-header no-border color = "primary" >
+	<ion-toolbar color = "primary" >
+		<ion-img (click) = "goBack()" class="logo" src="../assets/logo.png"></ion-img>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content >
 	<div id="login-wrapper">
 		<form action="" class="ion-padding" [formGroup]="loginForm" novalidate>
+			<!-- 
+
 			<ion-text>
 				<h3>Login</h3>
 				<p center class="error-msg-form" *ngIf="showError">{{errorTxt}}</p>
 			</ion-text>
+			-->
 			<div id="input">
 				<ion-input class="lovc-input" placeholder="email" formControlName="email"></ion-input>
-				<ion-input class="lovc-input" placeholder="senha" type="password" formControlName="password"></ion-input>
+				<ion-input class="lovc-input" placeholder="password" type="password" formControlName="password"></ion-input>
 			</div>
 			<div slot="end">
-				<p class="forgot" [routerLink]="['/sign-up']">Sign Up</p>
+				<!-- 
+					<p class="forgot" [routerLink]="[/sign-up']">Login</p>
+				-->
+				
 			</div>
-			<ion-button color="success" (click)="login()" [disabled]="!loginForm.valid || loading">
-				<p *ngIf="!loading">LOGIN</p>
+			<ion-button size = "large" color="success" (click)="login()" [disabled]="!loginForm.valid || loading">
+				<p  *ngIf="!loading">LOGIN</p>
 				<p *ngIf="loading">LOADING...</p>
 			</ion-button>
 		</form>

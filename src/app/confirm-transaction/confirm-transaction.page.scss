@@ -73,11 +73,40 @@ p.tasks-title{
 
 
 ion-text{
-    p{
+    p.info{
         margin:30px;
         margin-top: 60px;
         font-size:16px;
+        font-weight: 400;
+        color: rgba(0,0,0,0.6);
+    
+        bottom: 70px;
     }
+
+    h2{
+        margin:30px;
+        margin-top: 60px;
+        font-size:24px;
+        font-weight: 700;
+    }
+
+ 
+
+   
+}
+
+ion-text.transaction{
+    margin: 30px;
+
+   
+    p{
+        margin: 20px;
+    }
+
+    p.bold{
+        font-weight: bold;
+    }
+
 }
 
 ion-item.alter-profile{

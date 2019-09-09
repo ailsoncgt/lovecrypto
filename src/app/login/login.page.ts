@@ -38,6 +38,11 @@ export class LoginPage implements OnInit {
     })
   }
 
+  goBack(){
+    this.router.navigateByUrl('/welcome');
+  };
+
+
   login() {
     const email = this.loginForm.value.email;
     const password = this.loginForm.value.password;
