@@ -13,11 +13,13 @@ export class HelpPage implements OnInit {
 
   constructor(private route: Router) { }
 
-  openSettings(){
+  openSettings() {
     this.route.navigateByUrl('/settings');
   };
 
   ngOnInit() {
   }
+
+  openHelp() { }
 
 }

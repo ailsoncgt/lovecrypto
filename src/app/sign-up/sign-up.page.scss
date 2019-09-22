@@ -15,7 +15,7 @@ ion-header{
 
 ion-content{
   #signup-wrapper{
-    margin-top: 30%;
+    margin-top: 20%;
     form{
       max-width: 400px;
       margin-top: 20%;
@@ -26,11 +26,15 @@ ion-content{
       margin-bottom: 5%;
       text-align: center;
     }
+    .action{
+      margin-top: 40px;
+      text-align: center;
+    }
     ion-button{
       width: 50%;
       // margin: 0 auto;
       font-size: 15px;
-      bottom: 30px;
+      bottom: 0px;
       left: 25%;
     }
 
@@ -39,6 +43,8 @@ ion-content{
       color: #7b05c9;
       cursor: pointer;
       margin: 0;  
+      text-decoration: none;
+      float: right;
     }
     p.forgot{
       float: right;

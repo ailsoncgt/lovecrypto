@@ -14,8 +14,8 @@ export class WelcomePage implements OnInit {
   sliderConfig = {
     initialSlide: 1,
     speed: 400,
-    autoplay:true,
-     on: {
+    autoplay: true,
+    on: {
       beforeInit() {
         const swiper = this;
         swiper.classNames.push(`${swiper.params.containerModifierClass}fade`);
@@ -75,7 +75,7 @@ export class WelcomePage implements OnInit {
         }
       },
     }
-  }    
+  }
 
   ngOnInit() {
   }

@@ -1,10 +1,10 @@
-<ion-header no-border color = "primary" >
-	<ion-toolbar color = "primary" >
-		<ion-img (click) = "goBack()" class="logo" src="../assets/logo.png"></ion-img>
+<ion-header no-border color="primary">
+	<ion-toolbar color="primary">
+		<ion-img (click)="goBack()" class="logo" src="../assets/logo.png"></ion-img>
 	</ion-toolbar>
 </ion-header>
 
-<ion-content >
+<ion-content>
 	<div id="login-wrapper">
 		<form action="" class="ion-padding" [formGroup]="loginForm" novalidate>
 			<!-- 
@@ -19,15 +19,17 @@
 				<ion-input class="lovc-input" placeholder="password" type="password" formControlName="password"></ion-input>
 			</div>
 			<div slot="end">
-				<!-- 
-					<p class="forgot" [routerLink]="[/sign-up']">Login</p>
-				-->
-				
+
+				<a class="forgot" (click)="goSignUp()">Sign Up</a>
+
+
 			</div>
-			<ion-button size = "large" color="success" (click)="login()" [disabled]="!loginForm.valid || loading">
-				<p  *ngIf="!loading">LOGIN</p>
-				<p *ngIf="loading">LOADING...</p>
-			</ion-button>
+			<div class="action">
+				<ion-button size="large" color="success" (click)="login()" [disabled]="!loginForm.valid || loading">
+					<p *ngIf="!loading">LOGIN</p>
+					<p *ngIf="loading">LOADING...</p>
+				</ion-button>
+			</div>
 		</form>
 	</div>
 </ion-content>

@@ -54,7 +54,7 @@ export class WalletPage implements OnInit {
         let find = false;
         if (task.participants) {
           Object.keys(task.participants).forEach(key => {
-            console.log(key, this.userId)
+            // console.log(key, this.userId)
             if (key == this.userId) {
               find = true;
             }

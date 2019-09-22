@@ -3,7 +3,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AuthProvider } from '../providers/auth/auth.provider';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full', canActivate: [AuthProvider] },
+  { path: '', redirectTo: 'welcome', pathMatch: 'full', canActivate: [AuthProvider] },
   { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomePageModule), canActivate: [AuthProvider] },
   { path: 'settings', loadChildren: './settings/settings.module#SettingsPageModule', canActivate: [AuthProvider] },
   { path: 'about', loadChildren: './about/about.module#AboutPageModule', canActivate: [AuthProvider] },

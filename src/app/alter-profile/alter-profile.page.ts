@@ -24,7 +24,7 @@ export class AlterProfilePage implements OnInit {
   taskId: string;
   userId: string;
   user: any;
-  userBalance: number;
+  userBalance: any;
 
   constructor(private route: Router,
     private platform: Platform,
@@ -46,7 +46,7 @@ export class AlterProfilePage implements OnInit {
       this.userId = uid;
       this.userProvider.byId(uid).subscribe(user => {
         this.user = user;
-        this.userBalance = this.user.balance;
+        this.userBalance = parseFloat(this.user.balance);
         // console.log(this.userBalance)
       })
     })
@@ -71,7 +71,10 @@ export class AlterProfilePage implements OnInit {
     this.taskProvider.addUser(this.taskId).then(_ => {
       this.taskProvider.byId(this.taskId).subscribe((task: any) => {
         // console.log(task)
+        console.log(this.userBalance, task.reward)
         this.userBalance += parseFloat(task.reward)
+        this.userBalance = this.userBalance.toFixed(2)
+        console.log(this.userBalance)
         this.userProvider.setItem(this.userId, { balance: this.userBalance }).then(_ => {
           this.route.navigateByUrl('/home')
         })
@@ -90,7 +93,7 @@ export class AlterProfilePage implements OnInit {
       })
     }
     else if (this.field == 'gender') {
-      this.userProvider.setItem(this.userId, { sex: this.profileForm.value.sex }).then(data => {
+      this.userProvider.setItem(this.userId, { sex: this.profileForm.value.gender }).then(data => {
         this.addUserInTask()
       })
     }

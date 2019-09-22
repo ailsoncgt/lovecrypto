@@ -37,10 +37,21 @@ export class LoginPage implements OnInit {
       console.log(err)
     })
   }
+  ionViewWillEnter() {
+    this.authProvider.getUserUid().then(uid => {
+      this.router.navigateByUrl('/home')
+    }).catch(err => {
+      console.log(err)
+    })
+  }
 
-  goBack(){
+  goBack() {
     this.router.navigateByUrl('/welcome');
   };
+
+  goSignUp() {
+    this.router.navigateByUrl('/sign-up');
+  }
 
 
   login() {

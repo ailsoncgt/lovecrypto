@@ -21,7 +21,7 @@ export class SettingsPage implements OnInit {
   };
 
   openProfile() {
-    this.route.navigateByUrl('/profile');
+    // this.route.navigateByUrl('/profile');
   };
 
   openNotifications() {

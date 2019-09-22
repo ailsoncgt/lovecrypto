@@ -25,7 +25,7 @@ export class SignUpPage implements OnInit {
 
     this.signUpForm = formBuilder.group({
       email: ['', Validators.compose([Validators.required, Validators.pattern(emailRegex)])],
-      name: ['', Validators.compose([Validators.required, Validators.minLength(10)])],
+      name: ['', Validators.compose([Validators.required, Validators.minLength(6)])],
       password: ['', Validators.compose([Validators.required, Validators.minLength(6)])],
       confirmPassword: ['', Validators.compose([Validators.required, Validators.minLength(6)])]
     });
@@ -33,7 +33,7 @@ export class SignUpPage implements OnInit {
   }
 
 
-  goBack(){
+  goBack() {
     this.route.navigateByUrl('/welcome');
   };
 
