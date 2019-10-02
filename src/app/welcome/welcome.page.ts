@@ -9,12 +9,19 @@ import { Router } from '@angular/router'
 })
 export class WelcomePage implements OnInit {
 
+  backgrounds = [
+    '../../assets/background/background-1.png',
+    '../../assets/background/background-2.png',
+    '../../assets/background/background-3.png',
+  ];
+
   constructor(private route: Router) { }
 
   sliderConfig = {
     initialSlide: 1,
     speed: 400,
     autoplay: true,
+    loop: true,
     on: {
       beforeInit() {
         const swiper = this;
