@@ -7,6 +7,7 @@ import {
   Router
 } from '@angular/router';
 import { AngularFireDatabase } from "@angular/fire/database";
+import * as firebase from 'firebase/app'
 import { Constants } from '../../environments/constants';
 import { Observable } from "rxjs";
 
@@ -60,6 +61,17 @@ export class AuthProvider implements CanActivate {
           reject(err);
         });
     });
+  }
+
+  signUpWithFacebook(): Promise<any> {
+    let provider = new firebase.auth.FacebookAuthProvider();
+    return new Promise((resolve, reject) => {
+      this.afAuth.auth.signInWithPopup(provider).then(data => {
+        console.log(data)
+      }).catch(err => {
+        console.log(err)
+      })
+    })
   }
 
   login(email, password): Promise<any> {

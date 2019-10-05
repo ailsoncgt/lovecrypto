@@ -25,7 +25,7 @@
 
 			</div>
 			<div class="action">
-				<ion-button size="large" color="success" (click)="login()" [disabled]="!loginForm.valid || loading">
+				<ion-button size="large" color="success" (click)="fbLogin()" [disabled]="!loginForm.valid || loading">
 					<p *ngIf="!loading">LOGIN</p>
 					<p *ngIf="loading">LOADING...</p>
 				</ion-button>

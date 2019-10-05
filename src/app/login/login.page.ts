@@ -53,6 +53,12 @@ export class LoginPage implements OnInit {
     this.router.navigateByUrl('/sign-up');
   }
 
+  fbLogin() {
+    this.authProvider.signUpWithFacebook().then(data => {
+
+    })
+  }
+
 
   login() {
     const email = this.loginForm.value.email;
