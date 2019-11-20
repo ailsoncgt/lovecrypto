@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { AuthProvider } from '../../providers/auth/auth.provider';
+import { AlertController } from '@ionic/angular';
 
 import { Router } from '@angular/router';
 
@@ -19,7 +20,8 @@ export class LoginPage implements OnInit {
   constructor(
     private authProvider: AuthProvider,
     private formBuilder: FormBuilder,
-    private router: Router
+    private router: Router,
+    private alertCtrl: AlertController
 
   ) {
     const emailRegex = /^[a-z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-z0-9]([a-z0-9-]*[a-z0-9])?(\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)*$/i;
@@ -31,18 +33,20 @@ export class LoginPage implements OnInit {
   }
 
   ngOnInit() {
-    this.authProvider.getUserUid().then(uid => {
-      this.router.navigateByUrl('/home')
-    }).catch(err => {
-      console.log(err)
-    })
+    // this.authProvider.getUserUid().then(uid => {
+    //   this.router.navigate(['/home'])
+    // }).catch(err => {
+    //   console.log(err)
+    //   alert('erro: ')
+    // })
   }
   ionViewWillEnter() {
-    this.authProvider.getUserUid().then(uid => {
-      this.router.navigateByUrl('/home')
-    }).catch(err => {
-      console.log(err)
-    })
+    // this.authProvider.getUserUid().then(uid => {
+    //   this.router.navigate(['/home'])
+    // }).catch(err => {
+    //   console.log(err)
+    //   alert('erro: ')
+    // })
   }
 
   goBack() {
@@ -54,9 +58,25 @@ export class LoginPage implements OnInit {
   }
 
   fbLogin() {
-    this.authProvider.signUpWithFacebook().then(data => {
+    this.authProvider.loginFb()
+    // this.authProvider.signUpWithFacebook().then(data => {
+    //   if (data) {
+    //     this.router.navigateByUrl('/home')
+    //   }
+    // }).catch(err => {
+    //   console.log(err);
+    // })
+  }
 
-    })
+  gmailLogin() {
+    this.authProvider.gPlusLogin()
+    // this.authProvider.signUpWithGmail().then(data => {
+    //   if (data) {
+    //     this.router.navigateByUrl('/home')
+    //   }
+    // }).catch(err => {
+    //   console.log(err);
+    // })
   }
 
 
@@ -73,6 +93,7 @@ export class LoginPage implements OnInit {
         this.showError = true;
         this.loading = false;
       }
+      console.log(err)
     })
 
   }

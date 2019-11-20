@@ -1,20 +1,155 @@
-ion-header{
-  background-color: purple;
+// ion-header{
+//   background-color: purple;
 
-  ion-img{
-      margin: auto;
-      margin-top: 90px;
-      margin-bottom: 90px;
-  }
+//   ion-img{
+//       margin: auto;
+//       margin-top: 90px;
+//       margin-bottom: 90px;
+//   }
   
-  ion-img.logo{
-      width: 300px;
+//   ion-img.logo{
+//       width: 300px;
+//   }
+// }
+
+
+// ion-content{
+//   #signup-wrapper{
+//     margin-top: 20%;
+//     form{
+//       max-width: 400px;
+//       margin-top: 20%;
+//       margin: 25px;
+//       text-align: center;
+//     }
+//     h3{
+//       margin-bottom: 5%;
+//       text-align: center;
+//     }
+//     .action{
+//       margin-top: 40px;
+//       text-align: center;
+//     }
+//     ion-button{
+//       width: 50%;
+//       // margin: 0 auto;
+//       font-size: 15px;
+//       bottom: 0px;
+//       left: 25%;
+//     }
+
+//     a.forgot{
+//       font-size: 14px;
+//       color: #7b05c9;
+//       cursor: pointer;
+//       margin: 0;  
+//       text-decoration: none;
+//       float: right;
+//     }
+//     p.forgot{
+//       float: right;
+//       font-size: 14px;
+//       color: rgba(0, 0 ,0 , 0.8);
+//     }
+//   }
+  
+// }
+
+
+ion-content.login-page{
+  --background: #ffffff url('../../assets/background/background-1.png') no-repeat center center / cover;
+
+  .content{
+    width: 80%;
+    margin: auto;
+    position: relative;
+    height: calc(100% - 60px);
+
+    ion-img.logo{
+      position: relative;    
+      margin-top: 20%;
+      margin-bottom: 50px;
+      z-index: 2;
+    }
+
+    form{
+      .lovc-input{
+        border: none!important;
+        .native-input.sc-ion-input-md{
+          height: 40px!important;
+        }
+      }
+      .action{
+        margin-top: 40px;
+        ion-button{
+          height: 45px;
+          font-size: 20px;
+          width: 60%;
+          margin-left: 20%;
+          margin-top: 15%;
+        }
+      }
+      .sign-up{
+        color: white;
+        float: right;
+        font-weight: 700;
+        // text-transform: uppercase;
+      }
+    }
+    .buttons{
+      position: absolute;
+      width: calc(100% + 30px);
+      left: -15px;
+      bottom: 75px;
+      .or{
+        position: absolute;
+        bottom: 25px;
+        width: 100%;
+        color: white;
+        font-weight: 800;
+        .left{
+          height: 1px;
+          background: white;
+          position: absolute;
+          left: 0;
+          width: 45%;
+        }
+        p{
+          position: absolute;
+          width: 10%;
+          left: 45%;
+          margin: 0;
+          bottom: -9.5px;
+          text-align: center;
+        }
+        .right{
+          height: 1px;
+          background: white;
+          position: absolute;
+          right: 0;
+          width: 45%;
+        }
+      }
+      .fb{
+        position: absolute;
+        left: 0;
+        width: 45%;
+        height: 45px;
+        text-transform: none;
+        --background: #3b5998;
+        color: white;
+      }
+      .gmail{
+        position: absolute;
+        right: 0;
+        height: 45px;
+        width: 45%;
+        text-transform: none;
+      }
+    }
   }
-}
 
-
-ion-content{
-  #signup-wrapper{
+  #login-wrapper{
     margin-top: 20%;
     form{
       max-width: 400px;
@@ -26,26 +161,24 @@ ion-content{
       margin-bottom: 5%;
       text-align: center;
     }
-    .action{
-      margin-top: 40px;
-      text-align: center;
-    }
+    
     ion-button{
       width: 50%;
       // margin: 0 auto;
       font-size: 15px;
-      bottom: 0px;
+      position: fixed;
+      bottom: 30px;
       left: 25%;
     }
-
+    
     a.forgot{
       font-size: 14px;
       color: #7b05c9;
       cursor: pointer;
       margin: 0;  
-      text-decoration: none;
       float: right;
     }
+
     p.forgot{
       float: right;
       font-size: 14px;

@@ -3,7 +3,7 @@ import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { AuthProvider } from '../../providers/auth/auth.provider';
 
 import { Router } from '@angular/router';
-import { User } from '../../models/users'
+import { User } from '../../models/users';
 
 @Component({
   selector: 'app-sign-up',

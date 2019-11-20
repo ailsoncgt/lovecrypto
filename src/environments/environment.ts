@@ -5,11 +5,11 @@
 export const environment = {
   production: false,
   firebaseConfigDev: {
-    apiKey: 'AIzaSyAoeegEW99VL3ZlsIDPMUdJvV1-GEJBgvc',
-    authDomain: 'lovecrypto-dev.firebaseapp.com',
-    databaseURL: 'https://lovecrypto-dev.firebaseio.com',
-    projectId: 'lovecrypto-dev',
-    storageBucket: 'lovecrypto-dev.appspot.com',
+    apiKey: 'AIzaSyDuPdb7VGarmp6i8bHNVZUuochk0pZdLCo',
+    authDomain: 'lovecrypto-test.firebaseapp.com',
+    databaseURL: 'https://lovecrypto-test.firebaseio.com',
+    projectId: 'lovecrypto-test',
+    storageBucket: 'lovecrypto-test.appspot.com',
     messagingSenderId: '915845624322'
   },
   firebaseConfigProd: {

@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { TaskPrivider } from '../../providers/task/task'
 import { UserPrivider } from '../../providers/user/user'
 import { AuthProvider } from 'src/providers/auth/auth.provider';
+import { User } from 'src/models/users';
 
 
 @Component({
@@ -15,13 +16,15 @@ import { AuthProvider } from 'src/providers/auth/auth.provider';
 export class HomePage {
 
   tasks: any = [];
-  user: any = {};
+  user: User;
   userId: string;
 
   constructor(private route: Router,
     private taskProvider: TaskPrivider,
     private authProvider: AuthProvider,
     private userProvider: UserPrivider) {
+
+    this.user = new User();
 
     this.authProvider.getUserUid().then(uid => {
       this.userId = uid;

@@ -1,4 +1,4 @@
-<ion-header no-border color="primary">
+<!-- <ion-header no-border color="primary">
 	<ion-toolbar color="primary">
 		<ion-img (click)="goBack()" class="logo" src="../assets/logo.png"></ion-img>
 	</ion-toolbar>
@@ -6,15 +6,15 @@
 
 <ion-content>
 	<div id="login-wrapper">
-		<form action="" class="ion-padding" [formGroup]="loginForm" novalidate>
-			<!-- 
+		<form action="" class="ion-padding" [formGroup]="loginForm" novalidate> -->
+<!-- 
 
 			<ion-text>
 				<h3>Login</h3>
 				<p center class="error-msg-form" *ngIf="showError">{{errorTxt}}</p>
 			</ion-text>
 			-->
-			<div id="input">
+<!-- <div id="input">
 				<ion-input class="lovc-input" placeholder="email" formControlName="email"></ion-input>
 				<ion-input class="lovc-input" placeholder="password" type="password" formControlName="password"></ion-input>
 			</div>
@@ -32,4 +32,45 @@
 			</div>
 		</form>
 	</div>
+</ion-content> -->
+<ion-content class="login-page">
+
+	<div class="content">
+		<ion-img class="logo" src="../assets/logo.png"></ion-img>
+		<form action="" [formGroup]="loginForm" novalidate>
+			<!-- 
+					<ion-text>
+						<h3>Login</h3>
+						<p center class="error-msg-form" *ngIf="showError">{{errorTxt}}</p>
+					</ion-text>
+					-->
+			<div id="input">
+				<ion-input class="lovc-input" placeholder="email" formControlName="email"></ion-input>
+				<ion-input class="lovc-input" placeholder="password" type="password" formControlName="password"></ion-input>
+			</div>
+			<div slot="end">
+
+				<a class="sign-up">Forgot your password?</a>
+
+
+			</div>
+			<div class="action">
+				<ion-button size="large" color="success" (click)="login()" [disabled]="!loginForm.valid || loading">
+					<p *ngIf="!loading">SIGN IN</p>
+					<p *ngIf="loading">LOADING...</p>
+				</ion-button>
+			</div>
+		</form>
+		<ion-row class="buttons">
+			<div class="or">
+				<div class="left"></div>
+				<p>or</p>
+				<div class="right"></div>
+			</div>
+			<ion-button fill="fill fb" color="fb" size="large" (click)="fbLogin()">facebook</ion-button>
+			<ion-button class="fill gmail" color="light" size="large" (click)="gmailLogin()">gmail</ion-button>
+
+		</ion-row>
+	</div>
+
 </ion-content>

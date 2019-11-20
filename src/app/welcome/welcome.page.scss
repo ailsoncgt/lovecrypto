@@ -21,16 +21,19 @@ ion-content{
         font-size: 25px;
         font-weight: bold;
         margin: 25px;
-        margin-top: 300px;
+        // margin-top: 300px;
         padding: 20px;
-        //position: absolute;
+        // position: absolute;
         //bottom: 180px;
         //fon
         //background-color: var(--primary-purple);
         color: white;
         height: 200px;
-        width: 100%;
+        // width: 100%;
+        text-align: center;
         position: absolute;
+        left: 0;
+        bottom: 0px;
     }
     p.nmt{
        // margin-top: 0;
@@ -40,10 +43,13 @@ ion-content{
         position: absolute;
         z-index: 2;
         top: 0;
+        height: 100%;
     }
 
     .buttons{
-        margin-top: 450px;
+        // margin-top: 450px;
+        position: absolute;
+        bottom: 15px;
         
     }
 
@@ -82,11 +88,7 @@ ion-content{
             z-index: 1;
             
         }
-    
-
-
     }
-        
 }
 
 

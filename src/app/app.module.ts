@@ -13,6 +13,9 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 
+import { Facebook } from '@ionic-native/facebook/ngx';
+import { GooglePlus } from '@ionic-native/google-plus/ngx';
+
 import { AuthProvider } from '../providers/auth/auth.provider'
 import { TaskPrivider } from '../providers/task/task'
 import { UserPrivider } from '../providers/user/user'
@@ -32,6 +35,8 @@ import { environment } from '../environments/environment'
   providers: [
     StatusBar,
     SplashScreen,
+    Facebook,
+    GooglePlus,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     AuthProvider,
     TaskPrivider,

@@ -82,6 +82,13 @@
   --secondary-green: #24D157;
   --secondary-green-saturated: #51E17C;
   --secondary-green-desaturated: #1DA746;
+
+  --ion-color-fb: #3b5998;
+  --ion-color-fb-rgb: 244, 244, 244;
+  --ion-color-fb-contrast: #000000;
+  --ion-color-fb-contrast-rgb: 0, 0, 0;
+  --ion-color-fb-shade: #3b5998;
+  --ion-color-fb-tint: #3b5998;
 }
 
 
@@ -92,12 +99,17 @@
 .lovc-input{
   border-radius: 3px;
   border: 1px solid #7b05c9;
-  color: #7b05c9;
+  color: black;
   font-weight: 500;
   font-size: 13px;
   height: 45px;
   margin-bottom: 30px;
   text-align: left;
+  .native-input.sc-ion-input-md{
+    height: 45px!important;
+    background: white;
+    border-radius: 5px;
+  }
 }
 .lovc-input:last-child{
   margin-bottom: 15px;

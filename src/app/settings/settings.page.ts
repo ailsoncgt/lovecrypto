@@ -48,7 +48,7 @@ export class SettingsPage implements OnInit {
   logout() {
     this.authProvider.logout().then(_ => {
       localStorage.clear();
-      this.route.navigateByUrl('/welcome');
+      this.route.navigate(['/welcome']);
     })
   }
 

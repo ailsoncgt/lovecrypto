@@ -88,10 +88,10 @@ export class WelcomePage implements OnInit {
   }
 
   signUp() {
-    this.route.navigateByUrl('/sign-up');
+    this.route.navigate(['/sign-up']);
   }
   login() {
-    this.route.navigateByUrl('/login');
+    this.route.navigate(['/login']);
   }
 
 }
